@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>The Project Formerly Known As Cloche</title>
+
+<!-- Bootstrap core CSS ================================================== -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template ===================================== -->
+     
+    <link href="css/cover.css" rel="stylesheet">
+
+<!-- Custom styles for this template ===================================== -->
+
+    <style type="text/css">
+
+        <!-- style1 {color: #FFFFFF} -->
+
+    </style>
+
+</head>
+
+<!-- NAVBAR ============================================================== -->
+
+<body>
+
+    <div class="navbar-wrapper">
+
+        <div class="container">
+
+            <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+
+                <div class="container">
+
+                    <div class="navbar-header">
+
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+                        <span class="sr-only">Toggle navigation</span>
+
+                        <span class="icon-bar"></span>
+
+                        <span class="icon-bar"></span>
+
+                        <span class="icon-bar"></span>
+
+                        </button>
+
+                        <a class="navbar-brand" href="index.html">The Data Storyboard</a>
+
+                    </div>
+
+                    <div class="navbar-collapse collapse">
+
+                        <ul class="nav navbar-nav">
+              
+              	          <li><img src="assets/logo.jpg" width="50px" height="50px"></li>
+              	              	
+              	          <li class="active"><a href="#">The data storyboard</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+<!-- Marketing messaging and featurettes ======================================= -->
+
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+<!-- One row of text below the carousel -->
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <h2 align="left">Social care</h2>
+
+            <p align="left">The data story behind residential, domiciliary and nursing care for the elderly.</p>
+
+        </div>
+
+    </div><!-- /.row -->
+
+
+<!-- START THE FEATURETTES =================================================== -->
+
+<hr class="featurette-divider">
+
+<!-- Title row -->
+
+<div class="row">
+
+    <div class="col-lg-4">
+    
+        <h3>A. What does it cost?</h3>
+
+    </div>
+
+    <div class="col-lg-4">
+    
+        <h3>B. Is it affordable?</h3>
+
+    </div>
+
+    <div class="col-lg-4">
+    
+        <h3>C. Is it a priority?</h3>
+
+    </div>
+
+</div> <!-- end title row -->
+    
+ 
+<div class="row"><!-- ROW 1 -->
+
+    <div class="col-lg-4">
+
+<!-- COLUMN CHART FOR SPEND PER HEAD -->
+    <html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+
+  var data = google.visualization.arrayToDataTable([
+      ['LA', '£', { role:'style' }],
+    ['Devon',  428, '#00cc99'],
+    ['comp 2',  500, '#a6eec9'],
+    ['comp 3',  450, '#a6eec9'],
+    ['comp 4',  475, '#a6eec9']
+  ]);
+
+  var options = {
+    hAxis: {title: 'Local authority', titleTextStyle: {color: 'black'}},
+    vAxis: {title: '£', minValue:0},
+    legend: {position:'none'}
+  };
+
+  var chart = new google.visualization.ColumnChart(document.getElementById('chart_div_A'));
+
+  chart.draw(data, options);
+
+}
+    </script>
+  </head>
+  <body>
+    <div id="chart_div_A" style="width: 350px; height: 200px;"></div>
+  </body>
+</html>
+<br>
+<p>Cost per head per week on residential care</p>
+
+    </div>
+        
+    <div class="col-lg-4">
+
+
+        
+<!-- COMBO CHART FOR GRAPH OF DOOM -->
+
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawVisualization);
+
+function drawVisualization() {
+  // Some raw data (not necessarily accurate)
+  var data = google.visualization.arrayToDataTable([
+    ['Month', 'Demand', 'Dept', 'Council'],
+    ['2010',  800,      1500,         4000,    ],
+    ['2011',  850,      1500,        4000,    ],
+    ['2012',  900,      1400,        3900,    ],
+    ['2013',  950,      1250,        3700,    ],
+    ['2014',  1000,      1210,         3500,    ],
+    ['2015',  1050,      1200,         3400,    ],
+    ['2016',  1100,      1180,         3300,    ],
+    ['2017',  1150,      1150,         3200,    ],
+    ['2018',  1200,      1100,         3100,    ],
+    ['2019',  1250,      1100,         3000,    ],
+    ['2020',  1300,      1100,         3000,    ],
+    ['2021',  1350,      1100,         3000,    ],
+    ['2022',  1400,      1100,         3000,    ],
+    ['2023',  1500,      1100,         3000,    ],
+    ['2024',  1600,      1100,         3000,    ],
+    ['2025',  1700,      1100,         3000,    ],
+    ['2026',  1800,      1100,         3000,    ],
+    ['2027',  2000,      1100,         3000,    ],
+  ]);
+
+  var options = {
+    vAxis: {title: "Cost of demand", minValue:0},
+    hAxis: {title: "Financial year"},
+    seriesType: "line",
+    series: {0: {type: "bars"},
+    legend: {position: 'none'}}
+  };
+
+  var chart = new google.visualization.ComboChart(document.getElementById('chart_div_B'));
+  chart.draw(data, options);
+}
+    </script>
+  </head>
+  <body>
+    <div id="chart_div_B" style="width: 350px; height: 200px;"></div>
+  </body>
+</html>
+
+        <br><p>Tipping points</p>
+
+        </div>
+        
+        <div class="col-lg-4">
+
+          
+<!-- COLUMN CHART FOR PRIORITY VIS -->
+          
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Priority', 'Score', { role: 'style' }],
+    ['Healthy',     4,     '#00b8e6'],
+    ['Safe',        4,      '#b2b2cc'],
+    ['Resilient',   2,      '#ffad5c'],
+    ['Prosperous',  1,      '#a6eec9'],
+    ['Connected',   1,      '#cc66ff']
+  ]);
+
+  var options = {
+  legend: {position: 'none'}
+  };
+
+  var chart = new google.visualization.ColumnChart(document.getElementById('chart_div_C'));
+
+  chart.draw(data, options);
+
+}
+    </script>
+  </head>
+  <body>
+    <div id="chart_div_C" style="width: 350px; height: 200px;"></div>
+  </body>
+</html>
+
+        <br><p>Link to strategic priority</p>
+        </div>
+
+
+      </div><!-- /.row -->
+
+<!-- Title row -->
+
+<div class="row">
+
+    <div class="col-lg-4">
+    
+        <h3>D. Who is affected?</h3>
+
+    </div>
+
+    <div class="col-lg-4">
+    
+        <h3>E. How are we doing on KPI 1?</h3>
+
+    </div>
+
+    <div class="col-lg-4">
+    
+        <h3>F. How are we doing on KPI 2?</h3>
+
+    </div>
+
+</div> <!-- end title row -->
+
+<div class="row"> <!-- ROW 2 -->
+
+ <div class="col-lg-4">
+
+          <html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawSeriesChart);
+
+    function drawSeriesChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['ID',          'Placement',    'y place', 'Category2',  '% pop'],
+        ['18 to 24',        3,          1,          'Age',      20],
+        ['25 to 64',        5,         4,          'Age',      30],
+        ['65 and over',     8,          6,          'Age',      35],
+        ['Disability',      12,          9,          'PC',       33]
+      ]);
+
+      var options = {
+        vAxis: {title: 'Engagement score', maxValue:6},
+        hAxis: {maxValue:15},
+		vAxis: {maxValue:15},
+        bubble: {textStyle: {fontSize: 11}},
+        legend: {position:'none'},
+        tooltip: {trigger: 'selection'}
+      };
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+      chart.draw(data, options);
+    }
+
+    function drawGradientColorChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['ID', 'X', 'Y', 'Temperature'],
+        ['',   1,  4,      2],
+        ['',   2,  4,      2],
+        ['',   3,  4,      2],
+        ['',   4,  4,      2],
+        ['',   5,  4,      2],
+        ['',   6,  4,      2],
+        ['',   7,  4,      2]
+      ]);
+
+      var options = {
+        colorAxis: {colors: ['#80e6b2', '#ffad5c']},
+        legend: {position: 'none'}
+      };
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('gradient_chart_div'));
+      chart.draw(data, options);
+    }
+</script>
+  </head>
+  <body>
+    <div id="series_chart_div" style="width: 350px; height: 200px;"></div>
+  </body>
+</html>
+
+        </div>
+        
+
+        <div class="col-lg-4">
+
+          
+<!-- BAR CHART 1 FOR KPI COMPARISON -->
+          
+     <html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+
+  var data = google.visualization.arrayToDataTable([
+      ['LA', 'KPI', { role:'style' }],
+    ['Devon',  66, '#00cc99'],
+    ['comp 2',  56, '#a6eec9'],
+    ['comp 3',  75, '#a6eec9'],
+    ['comp 4',  68, '#a6eec9']
+  ]);
+
+  var options = {
+    hAxis: {title: 'Local authority', titleTextStyle: {color: 'black'}},
+    vAxis: {title: 'Demand', minValue:0},
+    legend: {position:'none'}
+  };
+
+  var chart = new google.visualization.ColumnChart(document.getElementById('chart_div_E'));
+
+  chart.draw(data, options);
+
+}
+    </script>
+  </head>
+  <body>
+    <div id="chart_div_E" style="width: 350px; height: 200px;"></div>
+  </body>
+</html>
+
+          <p>How are we doing? chart 1</p>
+
+
+        </div>
+        
+
+        <div class="col-lg-4">
+
+          
+<!-- BAR CHART 2 FOR KPI COMPARISON -->
+          
+          
+     <html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+
+  var data = google.visualization.arrayToDataTable([
+      ['LA', 'KPI', { role:'style' }],
+    ['Devon',  66, '#00cc99'],
+    ['comp 2',  56, '#a6eec9'],
+    ['comp 3',  75, '#a6eec9'],
+    ['comp 4',  68, '#a6eec9']
+  ]);
+
+  var options = {
+    hAxis: {title: 'Local authority', titleTextStyle: {color: 'black'}},
+    vAxis: {title: 'Demand', minValue:0},
+    legend: {position:'none'}
+  };
+
+  var chart = new google.visualization.ColumnChart(document.getElementById('chart_div_F'));
+
+  chart.draw(data, options);
+
+}
+    </script>
+  </head>
+  <body>
+    <div id="chart_div_F" style="width: 350px; height: 200px;"></div>
+  </body>
+</html>
+
+          <p>How are we doing? chart 2</p>
+
+
+        </div>
+        
+
+       
+
+
+      </div><!-- /.row -->
+      
+<!-- Title row -->
+
+<div class="row">
+
+    <div class="col-lg-4">
+    
+        <h3>G. What are the big risks?</h3>
+
+    </div>
+
+    <div class="col-lg-4">
+    
+        <h3>H. Are we improving on KPI 1?</h3>
+
+    </div>
+
+    <div class="col-lg-4">
+    
+        <h3>I. Are we improving on KPI 2?</h3>
+
+    </div>
+
+</div> <!-- end title row -->
+
+
+<div class="row"> <!-- ROW 3 -->
+
+  <div class="col-lg-4">
+      
+ <canvas id="myCanvas1" width="350" height="25"
+            style="border:1px solid #000000;">
+            <script>
+            var c = document.getElementById("myCanvas1");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#CC33FF";
+            ctx.fillRect(0,0,350,25);
+            ctx.font = "16px Arial";
+            ctx.fontColor="black";
+            ctx.strokeText("XX1234",15,17);
+            </script>
+            </canvas>
+            <br>
+            
+ <canvas id="myCanvas2" width="350" height="25"
+            style="border:1px solid #000000;">
+            <script>
+            var c = document.getElementById("myCanvas2");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#CC33FF";
+            ctx.fillRect(0,0,350,25);
+            ctx.font = "16px Arial";
+            ctx.fontColor="black";
+            ctx.strokeText("XX1234",15,17);
+            </script>
+            </canvas>
+            <br>
+            
+ <canvas id="myCanvas3" width="350" height="25"
+            style="border:1px solid #000000;">
+            <script>
+            var c = document.getElementById("myCanvas3");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#FF3300";
+            ctx.fillRect(0,0,350,25);
+            ctx.font = "16px Arial";
+            ctx.fontColor="black";
+            ctx.strokeText("XX1234",15,17);
+            </script>
+            </canvas>
+            <br>
+            
+ <canvas id="myCanvas4" width="350" height="25"
+            style="border:1px solid #000000;">
+            <script>
+            var c = document.getElementById("myCanvas4");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#FF3300";
+            ctx.fillRect(0,0,350,25);
+            ctx.font = "16px Arial";
+            ctx.fontColor="black";
+            ctx.strokeText("XX1234",15,17);
+            </script>
+            </canvas>
+            <br>
+            
+             <canvas id="myCanvas5" width="350" height="25"
+            style="border:1px solid #000000;">
+            <script>
+            var c = document.getElementById("myCanvas5");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#ffad5c";
+            ctx.fillRect(0,0,350,25);
+            ctx.font = "16px Arial";
+            ctx.fontColor="black";
+            ctx.strokeText("XX1234",15,17);
+            </script>
+            </canvas>
+            <br>
+            
+             <canvas id="myCanvas6" width="350" height="25"
+            style="border:1px solid #000000;">
+            <script>
+            var c = document.getElementById("myCanvas6");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#ffad5c";
+            ctx.fillRect(0,0,350,25);
+            ctx.font = "16px Arial";
+            ctx.fontColor="black";
+            ctx.strokeText("XX1234",15,17);
+            </script>
+            </canvas>
+            
+            <br><br><p>Something here about risks</p>
+            
+        </div>
+        
+        <div class="col-lg-4">
+
+<!-- LINE CHART 1 FOR TREND -->
+
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'KPI'],
+          ['2011',  1000],
+          ['2012',  1200],
+          ['2013',  1350],
+          ['2014',  1380]
+        ]);
+
+        var options = {
+          legend: {position: 'none'}
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div_5'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div_5" style="width: 350px; height: 200px;"></div>
+  </body>
+</html>
+
+          <br><p>What's the trend? chart 1</p>
+
+        </div>
+        
+
+        <div class="col-lg-4">
+
+          
+<!-- LINE CHART 2 FOR TREND -->
+          
+          <html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'KPI'],
+          ['2011',  1000],
+          ['2012',  900],
+          ['2013',  800],
+          ['2014',  750]
+        ]);
+
+        var options = {
+          legend: {position: 'none'}
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div_6'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div_6" style="width: 350px; height: 200px;"></div>
+  </body>
+</html>
+
+         <br><p>What's the trend? chart 2</p>
+
+
+        </div>
+        
+
+      
+
+
+      </div><!-- /.row -->
+
+      <hr class="featurette-divider">
+
+
+
+      <!-- /END THE FEATURETTES -->
+
+
+
+
+
+      <!-- FOOTER -->
+
+      <footer>
+
+        <p class="pull-right"><a href="#">Back to top</a></p>
+
+        <p>&copy; 2014 The Project Formerly Known As Cloche. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+
+      </footer>
+
+
+
+    </div><!-- /.container -->
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="assets/js/docs.min.js"></script>
+
+  </body>
+
+</html>
